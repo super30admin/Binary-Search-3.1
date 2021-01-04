@@ -1,5 +1,5 @@
-//Time - O(nlogn) + O(mlogm) + O(min(m.n)log(max(m,n)))
-//Space - O(m+n)
+//Time - O(max(m,n)log(max(m,n))
+//Space - O(1)
 class Solution{
 public:
 	vector<pair<int,int>> getIds(vector<pair<int,int>> a, vector<pair<int,int>> b, int target){
@@ -7,7 +7,7 @@ public:
 		vector<pair<int,int>> ret;
 
 		if(a.size() == 0 || b.size() ==0) return ret;
-		
+
 		vector<pair<int,int>> small = a;
 		vector<pair<int,int>> large = b;
 		if(a.size()>b.size()) {
@@ -27,6 +27,8 @@ public:
 		int minDiff = INT_MAX;
 		for(int i = 0;i<small.size();i++){
 			int idx = binarySearch(large, target-small[i].second);
+			if(idx == -1) continue;
+
 			int newDiff = target-(small[i].second + large[idx].second);
 
 			if(newDiff>=0 && newDiff <= minDiff){
@@ -37,7 +39,7 @@ public:
 				ret.push_back(make_pair(small[i].first,large[idx].first));
 				int index = idx+1;
 				while(index<large.size() && large[index].second == large[idx].second){
-					ret.push_back(make_pair(small[i].first,large[index].first));
+					ret.push_back(make_pair(small[i].first,large[index++].first));
 				}
 			}
 
@@ -49,8 +51,8 @@ public:
 
 	int binarySearch(vector<pair<int,int>>& arr, int ele){
 		int l = 0, h = arr.size()-1;
-
-		while(l+1<r){
+		int ans = -1;
+		while(l<=r){
 			int m = l+(r-l)/2;
 
 			if(arr[m].second == ele){
@@ -58,12 +60,12 @@ public:
 				while(left >0 && arr[m].second == arr[left-1]) left--;
 				return left;
 			}else if(arr[m].second < ele){
-				l = m;
+				ans = m;
+				l = m+1;
 			}else{
-				r = m;
+				r = m-1;
 			}
 		}
-
-		return l;
+		return ans;
 	}
 };
