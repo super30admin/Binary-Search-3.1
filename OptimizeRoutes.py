@@ -6,6 +6,7 @@ Space Complexity: O(1)
 
 '''
 Follow following pattern for Nearest Neighbour Binary Search
+The Binary search (high) will give the element less than target while (beg) will be give element greater than or equal to target.
 '''
 
 
@@ -22,6 +23,9 @@ def binarySearch(arr, n, id1):
 
     global output
     global min1
+    '''
+    Additional check to find whether there are element equal to target
+    '''
     if(beg<len(arr) and arr[beg][1]==n):
         end = beg
     if(end>=0 and n-arr[end][1]>=0 and n-arr[end][1]<=min1):
