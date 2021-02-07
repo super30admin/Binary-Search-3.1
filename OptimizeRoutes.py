@@ -4,6 +4,10 @@ Time Complexity: O(mlogn) where n is length of bigger array
 Space Complexity: O(1)
 '''
 
+'''
+Follow following pattern for Nearest Neighbour Binary Search
+'''
+
 
 def binarySearch(arr, n, id1):
     beg = 0
