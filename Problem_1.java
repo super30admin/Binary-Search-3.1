@@ -26,7 +26,7 @@ public class OptimalUtilization{
             }
         }
         if (allSums.size() == 0){
-            //target is less than every possible sums
+            //target is less  than every possible sums
             return new ArrayList<>();
         }
         return map.get(Collections.max(allSums));

@@ -11,7 +11,7 @@
 // find the mid and check the condition and if n is more then its number( whose value is n, the  number at that index) then move right(low = mid + 1). and if n is less then its number the  move to left (high = mid - 1)
 // Your code here along with comments explaining your approach
 
-// using binary search
+// using binary  search
 class Solution {
     public int hIndex(int[] citations) {
         if( citations == null || citations.length == 0) return 0;
