@@ -17,7 +17,7 @@ public class Problem275 {
             int diff=n-mid;
             if(citations[mid]==diff)
                 return diff;
-            else if(citations[mid]<diff)
+            else if(citations[mid]>diff)
                 high=mid-1;
             else
                 low=mid+1;
