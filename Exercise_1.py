@@ -1,6 +1,8 @@
 # S30 Problem #89 Optimization of routes
 #LeetCode # https://leetcode.com/discuss/post/1025705/amazon-oa-prime-air-time-by-anonymous_us-y1gu/
 
+# Playground https://leetcode.com/playground/CcvEfjKf
+
 # Author : Akaash Trivedi
 # Time Complexity : O(n+m)
 # Space Complexity : O(1)
