@@ -1,3 +1,7 @@
+// time complexity - O(logn)
+// space complexity - O(1)
+// did you face any issues - no
+// using two pointer approach to find the closed sum for target
 import java.util.*;
 
 public class ClosestPairSum {
