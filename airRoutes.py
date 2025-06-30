@@ -22,7 +22,6 @@ def airRoutes(arr1, arr2, capacity):
                 res = []
 
             if total == closest:
-                # collect all arr2 entries with same distance
                 temp_p2 = p2
                 while temp_p2 >= 0 and arr2[temp_p2][1] == b_dist:
                     res.append((a_id, arr2[temp_p2][0]))
