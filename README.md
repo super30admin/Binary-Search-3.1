@@ -1,4 +1,4 @@
-# Binary-Search-3.1
+# Binary-Search-31
 
 ## Problem1
 Optimize Air Routes (https://leetcode.com/discuss/interview-question/1025705/Amazon-or-OA-or-Prime-Air-time/824897) 
